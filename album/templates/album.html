@@ -1,0 +1,43 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<style>
+    #background {
+        background-image: url('/static/conor-luddy-IVaKksEZmZA-unsplash.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+</style>
+<div class="container" id="background">
+    <div id="prog">
+        <h1
+            style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold; color:whitesmoke;">
+            My-Gallery</h1>
+    </div>
+    <div id="opennote">
+
+        <h3 style="text-align:center; color: whitesmoke;">Hey I'm Moryn,</h3>
+        <p id="opennote"
+            style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px; color: whitesmoke;"> Welcome
+            to
+            My-Gallery</p>
+    </div>
+    </br>
+
+
+    <div class="row">
+        {% for location in locations %}
+
+        <a class="btn btn-danger btn-md" id="btn" href="/location/{{location.name}}"
+            style="font-size: 15px; text-align: center;">{{location.name}}</a>
+        {%endfor%}
+
+    </div>
+    <br>
