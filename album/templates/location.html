@@ -1,0 +1,30 @@
+{%extends 'base.html'%}
+
+{% block content %}
+
+{%for location in location_image%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<h3 style="font-size: 30px;font-family: 'Shadows Into Light', cursive;">Images in {{location.location}}</h3>
+<div class="container" id="background">
+    <div class="row">
+
+        <!--Card-->
+        <div class="card-columns col-md-4">
+
+            <!--Card image-->
+            <div class="view overlay">
+                <a data-toggle="modal" data-target="#pic">
+                    <img src="{{location.image.url}}" class="card-img-top" alt=" image" width="250px" height="300px">
+
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+</div>
+{% endblock %}
