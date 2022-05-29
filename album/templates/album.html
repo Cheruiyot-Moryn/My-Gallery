@@ -41,3 +41,34 @@
 
     </div>
     <br>
+
+    <div class="row">
+        {% for image in images %}
+        <div class="col-md-4">
+            <img src="{{image.image.url}}" alt="Image" class="img-thumbnail" data-toggle="modal"
+                data-target="#{{image.id}}" width="350px" height="200px">
+            <p style="color: white; font-size: 20px;">{{image.description}}</p>
+            <!-- Modal -->
+            <div id="{{image.id}}" class="modal fade" role="dialog">
+                <div class="modal-dialog image">
+
+                    <!-- Modal content-->
+                    <div class="modal-content " style="background-color: rgb(44, 43, 43);">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: white">{{image.name}}</h4>
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="color: white;">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{image.image.url}}" alt="" class="img-thumbnail">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success btn-lg" data-toggle="modal"
+                                data-target="#{{image.id}}-info"><i class="fas fa-info-circle"></i> Info</button>
+                            <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal"
+                                style="border: 0.5px solid #b32c0b;">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
