@@ -1,0 +1,30 @@
+{%extends 'base.html'%} 
+{% block content %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+<div class="container" id="background1">
+
+  <div class="row">
+    {% if images%}
+      <h2 style="font-family: 'Shadows Into Light', cursive; font-size: 40px;">FOUND{{ images|length }} OF SEARCHED IMAGE{{message}}</h2>
+    {% else %}
+      <h2 style="font-family: 'Shadows Into Light', cursive; font-size: 40px;"> FOUND 0 IMAGES FOR THE SEARCHED TERM {{message}}</h2>
+    {% endif %}
+
+  </div>
+
+  <div class="row">
+
+  {% if images %}
+    {% for image in images %}
+      <div class="col-sm-6 col-md-3">
+          <h1 style="font-family: 'Shadows Into Light', cursive; font-size: 30px;">{{image.name}}</h1>
+      </div>
+    {% endfor %}
+  {% endif %}
+  </div>
+</div>
+{% endblock 
