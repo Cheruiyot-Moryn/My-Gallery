@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
+# import django_heroku
+# import dj_database_url
+# from decouple import config,Csv
+
 
 from pathlib import Path
 import cloudinary
@@ -18,9 +22,9 @@ import cloudinary.uploader
 import cloudinary.api
 
 cloudinary.config(
-  cloud_name = "my-gallery",
-  api_key = "124635669382139",
-  api_secret = "4xqHBYqKLwLtaKZUL_DV2ON-pxs",
+  cloud_name = "toto-pics",
+  api_key = "553136944964928",
+  api_secret = "B5yz7aK_OI0Muj53qfMg67SaHds",
   secure = True
 )
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -48,6 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'album'
 ]
 
 MIDDLEWARE = [
