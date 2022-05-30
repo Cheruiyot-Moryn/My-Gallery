@@ -18,14 +18,14 @@
 <div class="container" id="background">
     <div id="prog">
         <h1
-            style="text-align:center; font-size:60px; font-family: 'Dancing Script', cursive; font-weight:bold; color:whitesmoke;">
+            style="text-align:center; font-size:60px; font-family: 'Shadows Into Light', cursive; font-weight:bold; color:whitesmoke;">
             My-Gallery</h1>
     </div>
     <div id="opennote">
 
         <h3 style="text-align:center; color: whitesmoke;">Hey I'm Moryn,</h3>
         <p id="opennote"
-            style="text-align:center; font-family: 'Dancing Script', cursive; font-size: 50px; color: whitesmoke;"> Welcome
+            style="text-align:center; font-family: 'Shadows Into Light', cursive; font-size: 50px; color: whitesmoke;"> Welcome
             to
             My-Gallery</p>
     </div>
@@ -47,7 +47,7 @@
         <div class="col-md-4">
             <img src="{{image.image.url}}" alt="Image" class="img-thumbnail" data-toggle="modal"
                 data-target="#{{image.id}}" width="350px" height="200px">
-            <p style="color: white; font-size: 20px;">{{image.description}}</p>
+            <p style="color: whitesmoke; font-size: 20px;">{{image.description}}</p>
             <!-- Modal -->
             <div id="{{image.id}}" class="modal fade" role="dialog">
                 <div class="modal-dialog image">
@@ -55,9 +55,9 @@
                     <!-- Modal content-->
                     <div class="modal-content " style="background-color: rgb(44, 43, 43);">
                         <div class="modal-header">
-                            <h4 class="modal-title" style="color: white">{{image.name}}</h4>
+                            <h4 class="modal-title" style="color: whitesmoke">{{image.name}}</h4>
                             <button type="button" class="close" data-dismiss="modal"
-                                style="color: white;">&times;</button>
+                                style="color: whitesmoke;">&times;</button>
                         </div>
                         <div class="modal-body">
                             <img src="{{image.image.url}}" alt="" class="img-thumbnail">
@@ -72,3 +72,33 @@
 
                 </div>
             </div>
+
+            <div id="{{image.id}}-info" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content " style="background-color: rgb(44, 43, 43);">
+                        <div class="modal-header">
+                            <h4 class="modal-title" style="color: whitesmoke;">{{image.category}} Category</h4>
+                            <button type="button" class="close" data-dismiss="modal"
+                                style="color: whitesmoke;">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="modal-title" style="color: whitesmoke;">{{image.name}}</h4>
+                            <p style="color: whitesmoke;">{{image.description}}</p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <input class="form-control input-lg" type="text" value="{{image.image.url}}" id="">
+                            <button class="btn btn-primary btn-lg"
+                                onclick="copyToClipboard('{{image.id}}-url')">Copy</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
