@@ -19,3 +19,14 @@ def search(request):
     else:
         message = "You haven't searched for any images in that category"
         return render(request, 'search.html',{"message":message})
+
+def image(request,image_id):
+    try:
+        image = Image.objects.get(id = image_id)
+    except Exception:
+        raise Http404()
+    return render(request,"images.html", {"image":image})
+
+def location_image(request, location):
+    images = Image.filter_by_location(location)
+    return render(request, 'location.html', {'location_image': images})        
