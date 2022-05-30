@@ -1,3 +1,4 @@
+from album.models import Category, Image, Location
 from django.test import TestCase
 
 # Create your tests here.
