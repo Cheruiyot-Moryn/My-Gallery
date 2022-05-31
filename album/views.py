@@ -1,5 +1,5 @@
 from django.http.response import Http404
-from album.models import Image, Location
+from .models import Image, Location
 from django.shortcuts import render
 
 # Create your views here.
@@ -23,12 +23,12 @@ def search(request):
         return render(request, 'search.html',{"message":message})
 
 def image(request,image_id):
-    try:
-        image = Image.objects.get(id = image_id)
-    except Exception:
-        raise Http404()
-    return render(request,"images.html", {"image":image})
+        try:
+            image = Image.objects.get(id = image_id)
+        except Exception:
+            raise Http404()
+        return render(request,"images.html", {"image":image})
 
-def location_image(request, location):
-    images = Image.filter_by_location(location)
-    return render(request, 'location.html', {'location_image': images})        
+def location(request, location):
+        images = Image.filter_by_location(location)
+        return render(request, 'location.html', {'location_image': images})        

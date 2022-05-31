@@ -47,7 +47,7 @@ class TestImage(TestCase):
         self.location = Location(name='Eldoret')
         self.location.save_location()
 
-        self.category = Category(name='farms')
+        self.category = Category(name='landscapes')
         self.category.save_category()
 
         self.image = Image(id=1, name='image', description='This is picture album test',location=self.location,category=self.category)

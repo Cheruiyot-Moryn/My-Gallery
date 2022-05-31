@@ -1,0 +1,11 @@
+body{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2vw;
+}
+.btn{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.1vw;
+}
+#home{
+    list-style: none;
+}
