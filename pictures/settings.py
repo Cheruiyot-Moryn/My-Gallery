@@ -11,24 +11,9 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-# import django_heroku
-# import dj_database_url
-# from decouple import config,Csv
 
-
-from pathlib import Path
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
-cloudinary.config(
-  cloud_name = "toto-pics",
-  api_key = "553136944964928",
-  api_secret = "B5yz7aK_OI0Muj53qfMg67SaHds",
-  secure = True
-)
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
@@ -46,14 +31,13 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'album.apps.AlbumConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'album',
-    'cloudinary',
     'bootstrap3',
 ]
 
