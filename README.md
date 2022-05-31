@@ -1,54 +1,47 @@
 # My-Gallery
 
-#### By Moureen Chepkoech
+## Author
+Moureen Chepkoech
 
-## Description
-This is a personal gallery application that you display your photos for others to see.
-## Table of Content
-+ [Description](#description)
-+ [Installation Requirement](#Installation)
-+ [Technology Used](#technology-used)
-+ [Reference](#reference)
-+ [Authors Info](#author-Info)
+### Description
+This is a Django application of a Personal Gallery where a user can view pictures of a certain category, see the location of the picture and also copy the link of the picture they like.
 
-## Setup/Installation Requirements
-*To get a copy of the project up and running on your local machine for development and testing purposes, clone this repository into a virtual environment and install the package manager, pip. See deployment for notes on how to deploy the project on a live system. Here is the live link 
+## SetUp and Installations
+To get the code, clone the repository:  https://github.com/Cheruiyot-Moryn/My-Gallery.git
+Move to the folder and run the following commands;
 
+    $ cd My-Gallery
+    $ pip install -r requirements.txt
 
-## Prerequisites
-* Use the package manager pip to install all project requirements.
-```
-(env) $ pip install -r requirements.txt
-```
+Set up Configurations and Installations
 
-## Running the tests
-```sh
-(env) $ python3 manage.py test picz
-```
-## Known Bugs
-* There are no known bugs currently but pull requests are allowed incase you spot a bug
+    $ python3.8 manage.py makemigrations album
 
+Running the Application
 
-## Deployment
+    $ python3.8 manage.py runserver
 
-With all environment variables changed to suit your local copy of this repository, deploy the application to [Heroku](https://medium.com/@hdsingh13/deploying-django-app-on-heroku-with-postgres-as-backend-b2f3194e8a43) to see it live or simply run it locally
- ```
- (virtual) $ python3 manage.py runserver
- ```
+Testing the Application
 
-## Built With
+    $ python3.8 manage.py test (NAME_OF_APP)
 
-* [Django 4.0.4](https://www.djangoproject.com/) - The web framework used
-* [Heroku](https://www.heroku.com/platform) -  Deployment platform
-* [Python3.8.10](https://www.python.org/) - Backend logic
-* [Postresql](https://www.postgresql.org/) - Database system
+Open the following host on your browser 127.0.0.1:8000
 
+### Dependencies
+1. Python3.8
+2. Django 1.11.17
+3. Virtual environment. To install Virtual Environment, run this code; $ python3.8 -m venv virtual
+4. Heroku
+5. Gunicorn
 
-### License
-## Support and contacts details
-You can reach me:
+### Technologies Used
+1. Python
+2. bootstrap
+3. Git
+4. Heroku
 
-Email(ctotomc98@gmail.com) 
+# Live Link
+View [live]
 
-## LICENCE  
-Copyright (c) 2022 [click to view LICENCE](LICENSE)
+## License
+The project is under the [MIT](LICENSE) license.
