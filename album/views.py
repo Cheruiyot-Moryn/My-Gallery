@@ -1,6 +1,6 @@
+from django.shortcuts import render
 from django.http.response import Http404
 from .models import Image, Location
-from django.shortcuts import render
 
 # Create your views here.
 def album(request):
