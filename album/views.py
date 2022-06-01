@@ -5,9 +5,9 @@ from .models import Image, Location
 # Create your views here.
 def album(request):
     images = Image.objects.all()
-    locations = Location.get_locations()
-    print(locations)
-    return render(request, 'album.html', {'images': images[::-1], 'locations': locations})
+    location = Location.get_location()
+    print(location)
+    return render(request, 'album.html', {'images': images[::-1], 'locations': location})
 
 def search(request):
 
