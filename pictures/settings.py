@@ -13,7 +13,12 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
+import os
 from pathlib import Path
+import django_heroku
+import dj_database_url
+#from decouple import config,Csv
+
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
@@ -30,7 +35,7 @@ SECRET_KEY = 'django-insecure-fz%4tlv5j2ft0fiqrkx2nvtt$)8ps#vho$b0785hvbb1^@tqw^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,13 +132,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
-MEDIA_URL='/images/'
-
 STATICFILES_DIRS=[
     BASE_DIR /'static'
 ]
+django_heroku.settings(locals())
 
+MEDIA_URL='/images/'
 MEDIA_ROOT= BASE_DIR/'static/images'
 STATIC_ROOT= BASE_DIR/'staticfiles'
 
