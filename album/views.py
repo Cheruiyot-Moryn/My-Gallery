@@ -5,7 +5,7 @@ from .models import Image, Location
 # Create your views here.
 def album(request):
     images = Image.objects.all()
-    location = Location.get_location()
+    location = Location.get_Location()
     print(location)
     return render(request, 'album.html', {'images': images[::-1], 'locations': location})
 
