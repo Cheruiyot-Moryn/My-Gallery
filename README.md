@@ -38,10 +38,9 @@ Open the following host on your browser 127.0.0.1:8000
 1. Python
 2. bootstrap
 3. Git
-4. Heroku
 
 # Live Link
-View [live]
+View [live](https://imaginations.herokuapp.com/).
 
 ## License
 The project is under the [MIT](LICENSE) license.
